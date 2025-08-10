@@ -1,0 +1,76 @@
+/* Calculator.css */
+
+.bg-calculator {
+  background: #f9fafb;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937; /* Dark gray */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111827; /* Almost black */
+}
+
+p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+div > p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for salary cards */
+div > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Common card style */
+.salary-8,
+.salary-6,
+.salary-4 {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  padding: 1.5rem 2rem;
+  width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.salary-8:hover,
+.salary-6:hover,
+.salary-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+}
+
+.salary-8 h2,
+.salary-6 h2,
+.salary-4 h2 {
+  color: #2563eb; /* Blue-600 */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e7ff; /* Light blue border */
+  padding-bottom: 0.5rem;
+}
+
+/* Salary values */
+.salary-8 p,
+.salary-6 p,
+.salary-4 p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #374151; /* Gray-700 */
+  text-align: center;
+}

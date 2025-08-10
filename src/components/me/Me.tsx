@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Me.css"; // ← Import the CSS file
+import { useNavigate } from "react-router-dom";
 
 const availableTechnologies = [
   "JavaScript",
@@ -14,6 +15,8 @@ export default function Me() {
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("");
   const [selectedExperience, setSelectedExperience] = useState<string>("");
+
+  const navigate = useNavigate();
 
   const toggleTech = (technologie: string) => {
     if (selectedTech.includes(technologie)) {
@@ -31,11 +34,23 @@ export default function Me() {
     setSelectedDifficulty(dif);
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    navigate("/calculator", {
+      state: {
+        difficulty: selectedDifficulty,
+        technologies: selectedTech,
+        year_of_experience: selectedExperience,
+      },
+    });
+  };
+
   return (
     <div className="container-windows">
       <div className="container">
         <h1>Salary Calculator</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="difficulty">
               Difficulty of projects you are willing to take
@@ -106,7 +121,9 @@ export default function Me() {
             </div>
           </div>
           <div className="button-submit-div">
-            <button className="button-submit-styling">Submit</button>
+            <button className="button-submit-styling" type="submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>{" "}

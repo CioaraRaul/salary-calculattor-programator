@@ -1,5 +1,5 @@
 import React from "react";
-import Me from "../components/me";
+import Me from "../components/me/Me";
 
 function InputPersonal() {
   return <Me />;
