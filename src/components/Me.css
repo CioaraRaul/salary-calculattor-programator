@@ -1,0 +1,89 @@
+/* Me.css */
+
+.container-windows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e0dfdf;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form > div {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.tech-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-buttons button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tech-buttons button:hover {
+  background-color: #e2e2e2;
+}
+
+.tech-buttons button.selected {
+  background-color: #a3d5ff;
+  border-color: #0077cc;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+h3 {
+  margin: 10px 0 5px;
+}
+
+.button-submit-div {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+}
+
+.button-submit-styling {
+  border: none;
+  font-size: 1.2rem;
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem 2.4rem;
+  border-radius: 10px;
+}
