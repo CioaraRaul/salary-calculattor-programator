@@ -35,7 +35,8 @@ function CalculateSalary(
   // Calculate deductions
   const casAmount = (adjustedBrut * CAS) / 100;
   const cassAmount = (adjustedBrut * CASS) / 100;
-  const incomeTax = (adjustedBrut * impozit_pe_venit) / 100;
+  const total = adjustedBrut - casAmount - cassAmount;
+  const incomeTax = (total * impozit_pe_venit) / 100;
 
   const netSalary = adjustedBrut - casAmount - cassAmount - incomeTax;
 
